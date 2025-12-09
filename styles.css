@@ -1,36 +1,29 @@
+/* Mobile First*/
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6; /* Luftigare text */
-    color: #333; /* Inte helt svart, mjukare för ögonen */
-    background-color: #f4f4f4; /* Ljusgrå bakgrund */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    font-size: 16px;
     margin: 0;
+    padding: 10px;
 }
 
-.container {
+h1{
+    font-size: 2em;
+}
+
+.container{
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    max-width: 1000px;     /* Sätter en maxbredd så raderna inte blir för långa */
-    margin: 40px auto;    /* "auto" på höger/vänster är det som centrerar boxen */
-    background: white;    /* Vit bakgrund på själva pappret */
-    padding: 40px;        /* Luft inuti boxen så texten inte nuddar kanten */
-}
-
-.left {
-display: flex;
-flex-direction: column;
-
-
-}
-.right {
-display: flex;
-flex-direction: column;
-margin-left: 40px; /* Avstånd mellan vänster och höger sektion */
+    flex-direction: column;
+    
 }
 
 .profile-pic {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
+    margin-bottom: 15px;
 }
