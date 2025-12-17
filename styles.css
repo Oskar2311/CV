@@ -7,14 +7,54 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #fcfcfc;
     font-size: 16px;
     margin: 0;
     padding: 10px;
 }
 
+header {
+    text-align: center;
+}
 h1{
     font-size: 2em;
+}
+
+h1, h2{
+    color: #2C3E50;
+}
+
+h3{
+    color: #34495E;
+    flex-shrink: 1;
+    margin: 0;
+}
+
+.thin{
+    font-weight: normal;
+}
+
+ul{
+    align-self: flex-start;
+}
+
+.skills ul{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.work-experience{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    gap: 10px;
+}
+
+.date{
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 /* Lägg till flexbox överta Div så att det blir på hela sidan. */
@@ -40,30 +80,32 @@ h1{
 .divider {
     width: 80%;
     height: 1px;
-    background: #020202;
     margin: 20px 0;
     border: none;
-    background: linear-gradient(to right, transparent 0%, black 50%, transparent 100%);
+    background: linear-gradient(to right, transparent 0%, #2C3E50 50%, transparent 100%);
 }
 
 /* Stil på knapparna */
 .button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 25px;
     font-size: 16px;
-    color: #fff;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 5px;
+    color: #2C3E50;
+    background-color: transparent;
+    border: 1px solid #2C3E50;
+    border-radius: 4px;
     text-decoration: none;
-    text-align: center;
     margin: 10px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 25px;
 }
 
 /* Hover-effekt på knapparna */
 .button:hover {
-    background-color: #0056b3;
+    background-color: #2C3E50;
+    color: #ffffff;
 }
 
 /* Contact information */
