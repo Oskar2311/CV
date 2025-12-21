@@ -2,7 +2,7 @@
 *, *::before, *::after {
     box-sizing: border-box;
 }
-
+/* Standards */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -55,9 +55,10 @@ ul{
 .date{
     flex-shrink: 0;
     white-space: nowrap;
+    font-weight: bold;
 }
 
-/* Lägg till flexbox överta Div så att det blir på hela sidan. */
+/* Add Flexbox to container so it spans the entire page. */
 .container{
     width: 100%;
     display: flex;
@@ -66,7 +67,7 @@ ul{
 
 }
 
-/* Stil på bilden */
+/* Picture style */
 .profile-pic {
     width: 150px;
     height: 150px;
@@ -76,7 +77,7 @@ ul{
     margin-top: 15px;
 }
 
-/* Stil på divider */
+/* Divider Style */
 .divider {
     width: 80%;
     height: 1px;
@@ -85,7 +86,7 @@ ul{
     background: linear-gradient(to right, transparent 0%, #2C3E50 50%, transparent 100%);
 }
 
-/* Stil på knapparna */
+/* Button Style */
 .button {
     display: inline-block;
     padding: 10px 25px;
@@ -102,7 +103,7 @@ ul{
     margin-top: 25px;
 }
 
-/* Hover-effekt på knapparna */
+/* Hover-effect on buttons */
 .button:hover {
     background-color: #2C3E50;
     color: #ffffff;
@@ -124,7 +125,7 @@ ul{
 }
 
 .contact-item i {
-    color: #3498db;
+    color: #2C3E50;
     margin-right: 10px;
     font-size: 1.2em;
 }
