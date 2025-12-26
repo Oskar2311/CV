@@ -67,3 +67,7 @@ body {
     display:flex;
     padding: 10px;
 }
+
+.profilePic{
+    border-radius: 20px;
+}
