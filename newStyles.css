@@ -3,11 +3,18 @@
     box-sizing: border-box;
 }
 
+/* Standards */
 body {
-    width: 100%;
-    margin: 0; /* Tar bort webbläsarens standardmarginaler vid kanterna */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fcfcfc;
+    font-size: 16px;
+    margin: 0;
+
 }
 
+/* Navigationbar */
 .navBar {
     display: flex;                /* Aktiverar Flexbox för att lägga logotyp och meny på rad */
     justify-content: space-between; /* Trycker logotypen till vänster och menyn till höger */
@@ -52,4 +59,11 @@ body {
 /* Vad som händer när musen förs över li-taggen */
 .navLinks li:hover::after {
     width: 100%;             /* Linjen expanderar till 100% bredd, från mitten och utåt tack vare translateX */
+}
+
+/* Profile picture and name */
+
+.picName{
+    display:flex
+    
 }
