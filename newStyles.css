@@ -64,6 +64,6 @@ body {
 /* Profile picture and name */
 
 .picName{
-    display:flex
-    
+    display:flex;
+    padding: 10px;
 }
