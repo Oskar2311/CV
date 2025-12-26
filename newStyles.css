@@ -8,10 +8,15 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #fcfcfc;
+    background-color: #F7FAFC;
     font-size: 16px;
     margin: 0;
 
+}
+
+/* Shadows */
+.profilePic, .aboutMe, .skills, .skillsList li {
+    box-shadow: -5px 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Navigationbar */
@@ -61,7 +66,27 @@ body {
     width: 100%;             /* Linjen expanderar till 100% bredd, från mitten och utåt tack vare translateX */
 }
 
+/* Vad som händer för den aktiva sidan */
+.navLinks li.active::after {
+    width: 100%;
+}
+
+.navLinks li.active {
+    font-weight: bold; /* Gör texten tjockare för den aktiva sidan */
+    color: #ffffff;    /* Säkerställer att den är helt vit */
+}
+
 /* Profile picture and name */
+
+h1{
+    color: #1B365D;
+    margin-bottom: 0;
+}
+
+h2{
+    color: #48BB78;
+    margin-top: 0;
+}
 
 .picName{
     display:flex;
@@ -70,4 +95,51 @@ body {
 
 .profilePic{
     border-radius: 20px;
+    width: 150px;
+    height: 150px;
+}
+
+.profileName{
+    margin-left: 20px;
+    align-self: center;
+}
+
+/* About me section */
+.aboutMe{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+h3{
+    margin: 0;
+}
+
+/* Skills section */
+.skills{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #EDF2F7;
+
+}
+
+.skillsList{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 0;
+}
+
+.skillsList li{
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-left: 0;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 120px;
+    text-align: center;  
 }
