@@ -140,8 +140,10 @@ h3{
     margin-right: 15px;
     margin-left: 0;
     padding: 10px;
+    border: 1px solid #E2E8F0;
     border-radius: 10px;
     background-color: #ffffff;
     width: 120px;
     text-align: center;  
+
 }
