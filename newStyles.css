@@ -112,7 +112,9 @@ h2{
     background-color: #ffffff;
 }
 
+/* H3 is for the whole site */
 h3{
+    color: #1B365D;
     margin: 0;
 }
 
