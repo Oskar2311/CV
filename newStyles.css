@@ -15,24 +15,24 @@ body {
 }
 
 /* all boxes - Gemensamma stilar för alla dina huvudboxar */
-.picCard, .aboutMe, .skills, .skillsList li, .workExperience, .job {
+.picCard, .aboutMe, .skills, .skillsList li, .workExperience, .job,.education, .eduItem {
     box-shadow: -5px 10px 30px rgba(0, 0, 0, 0.2); /* Skapar skuggan (X, Y, suddighet, färg) */
     border-radius: 10px; /* Rundar hörnen */
 }
 
 /* Exclude picture - Lägger till marginaler och padding på allt utom profilbildens box */
-.aboutMe, .skills, .skillsList li, .workExperience, .job {
+.aboutMe, .skills, .skillsList li, .workExperience, .job, .education, .eduItem {
     padding: 10px; /* Luft inuti boxen */
     margin: 10px;  /* Luft utanför boxen */
 }
 
 /* Background color for white boxes - Styr vilka boxar som ska vara vita */
-.aboutMe, .skillsList li, .job{
+.aboutMe, .skillsList li, .job, .eduItem{
     background-color: #ffffff;
 }
 
 /* Background color for gray boxes - Styr vilka boxar som ska vara ljusblå/grå */
-.skills, .workExperience {
+.skills, .workExperience, .education {
     background-color: #EDF2F7;
 }
 
