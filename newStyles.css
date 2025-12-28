@@ -180,3 +180,16 @@ h4{
 .job h4 span {
     font-weight: normal;
 }
+
+.workItem, .edu {
+    display: flex;
+    justify-content: space-between; /* Trycker rubriken till vänster och datumet till höger */
+    align-items: baseline;          /* Ser till att texten ligger snyggt i höjdled */
+    margin-bottom: 5px;             /* Lite mellanrum ner till listan/texten */
+}
+
+.date {
+    font-weight: bold;              /* Valfritt: gör datumet lite tydligare */
+    white-space: nowrap;            /* Förhindrar att datumet radbryts på små skärmar */
+    color: #1B365D;
+}
