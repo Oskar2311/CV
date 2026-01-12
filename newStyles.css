@@ -196,13 +196,19 @@ h4{
 
 
 @media screen and (min-width: 1280px) {
+
     .container {
         width: 1200px;
         margin: 0 auto; /* Centrerar containern horisontellt */
+    }
+
+    .profileName{
+        margin-left: 40px;
     }
 
     .picCard{
         width: 250px;
         height: 250px;
     }
+
 }
