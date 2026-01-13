@@ -197,18 +197,45 @@ h4{
 
 @media screen and (min-width: 1280px) {
 
+    /* Bestämmer hur stor Containern med alla kort i ska vara */
     .container {
         width: 1200px;
         margin: 0 auto; /* Centrerar containern horisontellt */
     }
 
+    /* Bestämmer hur vida alla kort får vara, tanken är att det ska vara 2 kort på en rad */
+    .container section{
+        width: 48%;
+    }
+
+    /* En container specifikt för att sätta korten i flexbox */
+    .cardFlex{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        /* border: #1B365D 2px solid; */
+        justify-content: space-between;
+    }
+
+    /* Tanken är att jag ska fixa hur namnet ser ut i förhållande till bilden */
     .profileName{
         margin-left: 40px;
     }
 
+    /* Förstorar bilden */
     .picCard{
         width: 250px;
         height: 250px;
+    }
+
+    /* Sätter skillsKortet i samma höjd som aboutMe */
+    .skills{
+            margin-top: 20px;
+    }
+
+    /* Gör så att education kortet inte blir större än vad det behöver vara */
+    .education{
+        height: 100%;
     }
 
 }
