@@ -177,7 +177,7 @@ h4{
 }
 
 /* Tar bort fetstilt på din jobbtitel inuti rubriken */
-.job h4 span {
+.job h4 span, .edu h4 span {
     font-weight: normal;
 }
 
