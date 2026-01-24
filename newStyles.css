@@ -15,9 +15,10 @@ body {
 }
 
 /* all boxes - Gemensamma stilar för alla dina huvudboxar */
-.picCard, .aboutMe, .skills, .skillsList li, .workExperience, .job,.education, .eduItem {
-    box-shadow: -5px 10px 30px rgba(0, 0, 0, 0.2); /* Skapar skuggan (X, Y, suddighet, färg) */
+.picCard, .aboutMe, .skills, .skillsList li, .workExperience, .job, .education, .eduItem {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Skapar skuggan (X, Y, suddighet, färg) */
     border-radius: 10px; /* Rundar hörnen */
+    height: 100%;
 }
 
 /* Exclude picture - Lägger till marginaler och padding på allt utom profilbildens box */
@@ -204,8 +205,9 @@ h4{
     }
 
     /* Bestämmer hur vida alla kort får vara, tanken är att det ska vara 2 kort på en rad */
-    .container section{
+    .cardFlex section{
         width: 48%;
+        
     }
 
     /* En container specifikt för att sätta korten i flexbox */
@@ -213,30 +215,33 @@ h4{
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        /* border: #1B365D 2px solid; */
         justify-content: space-between;
     }
 
     /* Tanken är att jag ska fixa hur namnet ser ut i förhållande till bilden */
     .profileName{
-        margin-left: 40px;
+        margin-left: 40px; /* Mer avstånd från bilden till namnet */
+    }
+
+    .profileName h1 {
+        font-size: 3rem;
+    }
+
+    .picName{
+        width: 100%;
+        margin-bottom: 30px;
     }
 
     /* Förstorar bilden */
     .picCard{
-        width: 250px;
+        width: 250px; /* Lite större men inte dominant */
         height: 250px;
+        flex-shrink: 0; /* Hindrar bilden från att tryckas ihop */
     }
 
     /* Sätter skillsKortet i samma höjd som aboutMe */
     .skills{
-            margin-top: 20px;
-            height: 100%;
-    }
-
-    /* Gör så att education kortet inte blir större än vad det behöver vara */
-    .education{
-        height: 100%;
+        margin-top: 20px;
     }
 
 }
