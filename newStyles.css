@@ -231,6 +231,7 @@ h4{
     /* Sätter skillsKortet i samma höjd som aboutMe */
     .skills{
             margin-top: 20px;
+            height: 100%;
     }
 
     /* Gör så att education kortet inte blir större än vad det behöver vara */
