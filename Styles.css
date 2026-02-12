@@ -97,6 +97,11 @@ body {
     color: #ffffff;    /* Säkerställer att den är helt vit */
 }
 
+a {
+    color: #ffffff; /*Gör så att länkar blir vita*/
+    text-decoration: 0;
+}
+
 /* Profile picture and name - Sektionen med ditt namn och bild */
 
 h1{
