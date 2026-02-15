@@ -1,5 +1,14 @@
+/* Justerar min kod för att förenkla med hjälp av variabler */
+:root {
+    --primary-blue: #1B365D;
+    --accent-green: #48BB78;
+    --bg-light: #F7FAFC;
+    --bg-gray: #EDF2F7;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --radius: 10px;
+}
+
 /* Nollställer box-modellen så att padding/border inte gör element bredare än vad man angett */
-/* Detta är standard för att göra det lättare att räkna på storlekar */
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -7,24 +16,24 @@
 /* Standards - Grundinställningar för hela sidan */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6; /* Ger luft mellan textraderna */
-    color: #333; /* Mörkgrå textfärg */
-    background-color: #F7FAFC; /* Ljus bakgrundsfärg */
+    line-height: 1.6;
+    color: #333;
+    background-color: var(--bg-light);
     font-size: 16px;
-    margin: 0; /* Tar bort webbläsarens standardmarginaler */
+    margin: 0;
 }
 
 /* all boxes - Gemensamma stilar för alla dina huvudboxar */
 .picCard, .aboutMe, .skills, .skillsList li, .workExperience, .job, .education, .eduItem {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Skapar skuggan (X, Y, suddighet, färg) */
-    border-radius: 10px; /* Rundar hörnen */
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
     height: 100%;
 }
 
 /* Exclude picture - Lägger till marginaler och padding på allt utom profilbildens box */
 .aboutMe, .skills, .skillsList li, .workExperience, .job, .education, .eduItem {
-    padding: 10px; /* Luft inuti boxen */
-    margin: 10px;  /* Luft utanför boxen */
+    padding: 10px;
+    margin: 10px; 
 }
 
 /* Background color for white boxes - Styr vilka boxar som ska vara vita */
@@ -34,39 +43,33 @@ body {
 
 /* Background color for gray boxes - Styr vilka boxar som ska vara ljusblå/grå */
 .skills, .workExperience, .education {
-    background-color: #EDF2F7;
+    background-color: var(--bg-gray);
 }
 
 /* Navigationbar - Styling för den mörka listen högst upp */
 .navBar {
-    display: flex;                /* Aktiverar Flexbox för att lägga logotyp och meny på rad */
-    justify-content: space-between; /* Trycker logotypen till vänster och menyn till höger */
-    align-items: center;          /* Centrerar allt innehåll vertikalt i navbaren */
-    padding: 0;
-    background-color: #1B365D;    /* Den mörkblå färgen */
+    display: flex;
+    align-items: center;
+    background-color:var(--primary-blue);
     color: white;
-    width: 100%;
-    height: 50px;                 /* Bestämmer höjden på hela navigeringsfältet */
+    height: 50px;
 }
 
 /* navLinks - Listan med menyval */
 .navLinks {
-    display: flex;           /* Lägger alla <li> på en vågrät rad istället för på höjden */
-    justify-content: center; /* Centrerar länkarna horisontellt i förhållande till sig själv */
-    align-items: center;     /* Centrerar länkarna vertikalt */
-    list-style: none;        /* Tar bort punktlistans prickar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
     padding: 0;
     width: 100%; 
-    height: 100%;
 }
 
 /* navLinks li - De enskilda menyvalen */
 .navLinks li {
-    margin-left: 10px;     /* Skapar mellanrum mellan menyvalen */
-    margin-right: 10px;
-    position: relative;      /* Gör li-taggen till en "ankarpunkt" för den absoluta understrykningen */
-    padding-bottom: 5px;     /* Skapar lite luft mellan texten och underkanten */
-    cursor: pointer;         /* Gör att muspekaren blir en hand vid hover */
+    margin: 0 10px;
+    position: relative;
+    cursor: pointer;
 }
 
 /* Skapar det "osynliga" elementet som ska bli understrykningen */
@@ -82,40 +85,27 @@ body {
     transition: width 0.3s ease; /* Bestämmer att breddförändringen ska ske mjukt under 0.3 sekunder */
 }
 
-/* Vad som händer när musen förs över li-taggen - Linjen växer */
-.navLinks li:hover::after {
-    width: 100%;             /* Linjen expanderar till 100% bredd */
-}
-
-/* Vad som händer för den aktiva sidan */
-.navLinks li.active::after {
+.navLinks li:hover::after, .navLinks li.active::after {
     width: 100%;
 }
 
 .navLinks li.active {
-    font-weight: bold; /* Gör texten tjockare för den aktiva sidan */
-    color: #ffffff;    /* Säkerställer att den är helt vit */
+    font-weight: bold;
 }
+
+/* Typografi */
+h1, h3, h4, .date { color: var(--primary-blue); }
+h2 { color: var(--accent-green); margin-top: 0; }
+h1{ margin-bottom: 0;}
+h3, h4 { margin: 0; }
 
 a {
-    color: #ffffff; /*Gör så att länkar blir vita*/
-    text-decoration: 0;
-}
-
-/* Profile picture and name - Sektionen med ditt namn och bild */
-
-h1{
-    color: #1B365D;
-    margin-bottom: 0; /* Tar bort mellanrummet ner till din titel */
-}
-
-h2{
-    color: #48BB78; /* Den gröna färgen på din titel */
-    margin-top: 0;  /* Drar upp titeln närmare ditt namn */
+    color: inherit;
+    text-decoration: none;
 }
 
 .picName{
-    display:flex; /* Lägger bild och namn sida vid sida */
+    display:flex;
     padding: 10px;
 }
 
@@ -123,64 +113,42 @@ h2{
 .picCard{
     width: 130px;
     height: 130px;
-    overflow: hidden; /* Ser till att bilden inte sticker utanför boxen om den är för stor */
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
 /* profilePic - Själva bild-elementet */
 .profilePic{
-    width: 100%;      /* Fyller ut boxens bredd */
-    height: 100%;     /* Fyller ut boxens höjd */
-    object-fit: cover; /* Beskär bilden snyggt så den inte ser ihoptryckt ut */
-    display: block;    /* Tar bort litet extra utrymme i botten av bilden */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* profileName - Behållaren för ditt namn och titel */
 .profileName{
-    margin-left: 20px; /* Avstånd från bilden till namnet */
-    align-self: center; /* Centrerar texten vertikalt bredvid bilden */
-}
-
-/* About me section */
-.aboutMe{
-    margin: 10px;
-    margin-top: 20px;
-    padding: 10px;
-}
-
-/* H3 is for the whole site - Alla rubriker för de olika sektionerna */
-h3{
-    color: #1B365D;
-    margin: 0;
+    margin-left: 20px;
+    align-self: center;
 }
 
 /* Skills section - Styling för din lista med färdigheter */
-.skills{
-    margin: 10px;
-    padding: 10px;
-}
 
 .skillsList{
-    display: flex;      /* Lägger färdigheterna på rad */
-    list-style: none;   /* Tar bort prickarna i listan */
-    flex-wrap: wrap;    /* Gör att boxarna hoppar ner på nästa rad om skärmen är smal */
-    gap: 10px;          /* Jämnt mellanrum mellan boxarna */
-    justify-content: center; /* Centrerar listan i boxen */
-    padding-left: 0;    /* Tar bort standard-indraget för listor */
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 0;
 }
 
 .skillsList li{
-    margin-left: 0;
-    border: 1px solid #E2E8F0; /* En tunn ram runt varje färdighet */
+    margin: 0;
+    border: 1px solid #E2E8F0;
     width: 120px;
     text-align: center;  
 }
 
 /* Work Experience section - Jobbhistoriken */
-
-h4{
-    color: #1B365D;
-    margin: 0;
-}
 
 /* Tar bort fetstilt på din jobbtitel inuti rubriken */
 .job h4 span, .edu h4 span {
@@ -189,15 +157,9 @@ h4{
 
 .workItem, .edu {
     display: flex;
-    justify-content: space-between; /* Trycker rubriken till vänster och datumet till höger */
-    align-items: baseline;          /* Ser till att texten ligger snyggt i höjdled */
-    margin-bottom: 5px;             /* Lite mellanrum ner till listan/texten */
-}
-
-.date {
-    font-weight: bold;              /* Valfritt: gör datumet lite tydligare */
-    white-space: nowrap;            /* Förhindrar att datumet radbryts på små skärmar */
-    color: #1B365D;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 5px;
 }
 
 
@@ -219,34 +181,17 @@ h4{
     .cardFlex{
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
         justify-content: space-between;
-    }
-
-    /* Tanken är att jag ska fixa hur namnet ser ut i förhållande till bilden */
-    .profileName{
-        margin-left: 40px; /* Mer avstånd från bilden till namnet */
     }
 
     .profileName h1 {
         font-size: 3rem;
     }
 
-    .picName{
-        width: 100%;
-        margin-bottom: 30px;
-    }
-
     /* Förstorar bilden */
     .picCard{
         width: 250px; /* Lite större men inte dominant */
         height: 250px;
-        flex-shrink: 0; /* Hindrar bilden från att tryckas ihop */
-    }
-
-    /* Sätter skillsKortet i samma höjd som aboutMe */
-    .skills{
-        margin-top: 20px;
     }
 
 }
