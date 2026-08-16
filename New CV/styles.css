@@ -1,0 +1,25 @@
+/* Förenkling med hjälp av variabler */
+:root {
+    --primary-blue: #1B365D;
+    --accent-green: #48BB78;
+    --bg-light: #F7FAFC;
+    --bg-gray: #EDF2F7;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --radius: 10px;
+}
+
+/* Nollställer box-modellen så att padding/border inte gör element bredare än vad man angett */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Standards - Grundinställningar för hela sidan */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: var(--bg-light);
+    font-size: 16px;
+    margin: 0;
+}
+
