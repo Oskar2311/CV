@@ -23,3 +23,38 @@ body {
     margin: 0;
 }
 
+/*Stylar övre baren*/
+.navBar{
+    display: flex;
+    align-items: center;
+    background-color:var(--primary-blue);
+    height: 50px;
+    color: var(--bg-light);
+}
+
+/* ändrar position på länkarna i baren */
+.buttons{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+/* ändrar position på själv a knapparna */
+.buttons li{
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* stylear länkarna */
+a{
+    color: var(--bg-light);
+    text-decoration: none;
+}
+
+/* Ger den aktiva länken en bold look */
+.active{
+    font-weight: bold;
+}
+
