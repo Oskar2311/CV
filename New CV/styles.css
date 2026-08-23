@@ -23,7 +23,7 @@ body {
     margin: 0;
 }
 
-/*Stylar övre baren*/
+/*NAVBAR*/
 .navBar{
     display: flex;
     align-items: center;
@@ -32,7 +32,6 @@ body {
     color: var(--bg-light);
 }
 
-/* ändrar position på länkarna i baren */
 .buttons{
     display: flex;
     width: 100%;
@@ -41,20 +40,54 @@ body {
     padding: 0;
 }
 
-/* ändrar position på själv a knapparna */
 .buttons li{
     margin: 10px;
     cursor: pointer;
 }
 
-/* stylear länkarna */
+/* LINKS IN NAVBAR */
 a{
     color: var(--bg-light);
     text-decoration: none;
 }
 
-/* Ger den aktiva länken en bold look */
 .active{
     font-weight: bold;
 }
 
+/* Section Profile */
+.profile{
+    display: flex;
+    padding: 10px;
+    
+}
+
+.pictureBox{
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.picture{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name{
+    height: 130px;
+    margin-left: 20px;
+}
+
+h1{
+    margin-bottom: 0;
+    color: var(--primary-color);
+}
+
+h2{
+    color: var(--accent-color);
+    margin-top: 0;
+}
+
+/* CARDS - SECTION ABOUT ME */
