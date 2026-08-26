@@ -90,4 +90,21 @@ h2{
     margin-top: 0;
 }
 
-/* CARDS - SECTION ABOUT ME */
+/* CARDS */
+.card{
+    margin-left: 0;
+    padding-left: 10px;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    height: 100%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.whiteCard{
+    background-color: #ffffff;
+}
+
+.greyCard{
+      background-color: var(--bg-gray);
+}
