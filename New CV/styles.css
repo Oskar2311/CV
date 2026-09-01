@@ -108,3 +108,28 @@ h2{
 .greyCard{
       background-color: var(--bg-gray);
 }
+
+h3{
+    margin: 0;
+    color: var(--primary-color);
+}
+
+/* Skills */
+
+.skills{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.skills > li{
+    width: 120px;
+    text-align: center;
+    margin: 0;
+    border: 1px solid #E2E8F0;
+}
+
+/* Work Experience */
