@@ -13,7 +13,6 @@
     box-sizing: border-box;
 }
 
-/* Standards - Grundinställningar för hela sidan */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -23,7 +22,7 @@ body {
     margin: 0;
 }
 
-/*NAVBAR*/
+/*Navigation bar*/
 .navBar{
     display: flex;
     align-items: center;
@@ -45,7 +44,7 @@ body {
     cursor: pointer;
 }
 
-/* LINKS IN NAVBAR */
+/* Links in navigation bar */
 a{
     color: var(--bg-light);
     text-decoration: none;
@@ -80,6 +79,8 @@ a{
     margin-left: 20px;
 }
 
+/* Text h1 - h4 */
+
 h1{
     margin-bottom: 0;
     color: var(--primary-color);
@@ -90,7 +91,13 @@ h2{
     margin-top: 0;
 }
 
-/* CARDS */
+h3, h4{
+    margin: 0;
+    color: var(--primary-color);
+}
+
+/* Cards */
+
 .card{
     margin-left: 0;
     padding-left: 10px;
@@ -99,19 +106,16 @@ h2{
     height: 100%;
     padding: 10px;
     margin: 10px;
+    
 }
 
 .whiteCard{
     background-color: #ffffff;
+    border: 1px solid #E2E8F0;  /* SMALL BORDER AROUND WHITE CARD. YES OR NO??*/
 }
 
 .greyCard{
       background-color: var(--bg-gray);
-}
-
-h3{
-    margin: 0;
-    color: var(--primary-color);
 }
 
 /* Skills */
